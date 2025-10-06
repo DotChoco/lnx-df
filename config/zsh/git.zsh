@@ -1,4 +1,11 @@
 # Git functions for Zsh
+## Shortcuts
+alias glb="git branch -a" # Git List Branches
+alias gts="git status" # Git Status
+alias gtp="git push" # Git Push
+alias gtpl="git pull" # Git Pull
+alias gtin="git init"
+
 
 # Git Add All
 gta() {
@@ -91,9 +98,4 @@ gsb() {
 }
 
 
-# Shortcuts
-alias glb="git branch -a" # Git List Branches
-alias gts="git status" # Git Status
-alias gtp="git push" # Git Push
-alias gtpl="git pull" # Git Pull
-alias gtin="git init"
+
