@@ -1,3 +1,4 @@
+alias cd=z
 alias g=git
 alias ls=eza
 alias ll='eza -la --no-time --no-user --no-permissions --no-filesize --group-directories-first'

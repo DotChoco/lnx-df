@@ -7,8 +7,10 @@ if [ ! -d "$ZINIT_HOME" ]; then
   git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 fi
 
-
 source "${ZINIT_HOME}/zinit.zsh"
+zinit ice depth=1
+
+zinit light jeffreytse/zsh-vi-mode
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
@@ -21,16 +23,15 @@ prompt adam1
 setopt histignorealldups sharehistory
 
 # Use emacs keybindings even if our EDITOR is set to vi
-bindkey -e
+bindkey '^I' autosuggest-accept
+setopt NO_BEEP
 
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.zsh_history
 
-# Use modern completion system
-autoload -Uz compinit
-compinit
+
 
 zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _expand _complete _correct _approximate
@@ -62,31 +63,20 @@ DFL="$HOME/dot-files"
 setopt extendedglob
 setopt nullglob
 
+# Use modern completion system
+autoload -Uz compinit
+compinit
 
-# ~/.zshrc
-# # === Rutas de configuración ===
-# conf_dirs=(
-#   ~/.conf/zsh/core
-#   ~/.conf/zsh/plugins
-#   ~/.conf/zsh/aliases
-#   ~/.conf/zsh/functions
-# )
-#
-# # === Cargar todas las configuraciones ===
-# for dir in $conf_dirs; do
-#   for file in $dir/*.zsh(.N); do
-#     [ -r "$file" ] && source "$file"
-#   done
-# done
+export PATH="$HOME/.local/bin:$PATH"
+eval "$(zoxide init zsh)"
 
 
-
-
-fdirs=($(find $DFL/config/zsh/ -maxdepth 1 -type f))
 # Load zsh files
+fdirs=($(find $DFL/config/zsh/ -maxdepth 1 -type f))
 for f in $fdirs; do
   [ -r "$f" ] && source "$f"
 done
 
 unset fdirs
+
 
