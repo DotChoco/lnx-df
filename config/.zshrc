@@ -1,6 +1,6 @@
 # Global Variables
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
-DCONF="$HOME/.conf"
+DCONF="$HOME/.config"
 DEVD="$HOME/dev"
 DFL="$HOME/lnx-df"
 
@@ -14,12 +14,12 @@ fi
 
 # Load Resources
 source "${ZINIT_HOME}/zinit.zsh"
-source "${DFL}/config/zsh/plugins.zsh"
-source "${DFL}/config/zsh/aliases.zsh"
-source "${DFL}/config/zsh/git.zsh"
-source "${DFL}/config/zsh/powerline.zsh"
-source "${DFL}/config/zsh/env.zsh"
-# source "${DFL}/config/zsh/psdk.zsh" # Only Uncomment if you have de SDK's
+source "${DCONF}/zsh/plugins.zsh"
+source "${DCONF}/zsh/aliases.zsh"
+source "${DCONF}/zsh/git.zsh"
+source "${DCONF}/zsh/powerline.zsh"
+source "${DCONF}/zsh/env.zsh"
+# source "${DCONF}/zsh/psdk.zsh" # Only Uncomment if you have de SDK's
 
 
 
