@@ -5,9 +5,9 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Ejecuta otro script que está en el mismo directorio
-#"$SCRIPT_DIR/GameDev/PSPinstall.sh"
+"$SCRIPT_DIR/GameDev/PSPinstall.sh"
 
-git clone https://github.com/DotChoco/nvim
+git clone https://github.com/DotChoco/nvim ./config/nvim
 
 
 # Reset Symlinks
