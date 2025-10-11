@@ -55,8 +55,4 @@ zstyle ':fzf-tab:complete:*' fzf-preview 'ls --color=always ${realpath}'
 autoload -Uz compinit
 compinit
 
-# It doesn't a plugin but works with zsh
-eval "$(zoxide init zsh)"
 
-
-export PATH="$HOME/.local/bin:$PATH"
