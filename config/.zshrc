@@ -5,15 +5,10 @@ DEVD="$HOME/dev"
 DFL="$HOME/lnx-df"
 
 
-#Download Zinit, if it's not there yet
-if [ ! -d "$ZINIT_HOME" ]; then
-  mkdir -p "$(dirname $ZINIT_HOME)"
-  git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
-fi
-
 
 # Load Resources
 source "${ZINIT_HOME}/zinit.zsh"
+source "${DCONF}/gvar.zsh"
 source "${DCONF}/zsh/plugins.zsh"
 source "${DCONF}/zsh/aliases.zsh"
 source "${DCONF}/zsh/git.zsh"
