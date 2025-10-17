@@ -8,7 +8,7 @@ DFL="$HOME/lnx-df"
 
 # Load Resources
 source "${ZINIT_HOME}/zinit.zsh"
-source "${DCONF}/gvar.zsh"
+# source "${DCONF}/gvar.zsh"
 source "${DCONF}/zsh/plugins.zsh"
 source "${DCONF}/zsh/aliases.zsh"
 source "${DCONF}/zsh/git.zsh"
